@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhb-mb-iDp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="28u-TD-zgV">
+            <objects>
+                <navigationController id="bhb-mb-iDp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KQZ-5M-KVl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24313725490196078" green="0.60392156862745094" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GiB-HZ-yfe" kind="relationship" relationship="rootViewController" id="UjV-79-BfJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bZ-K8-GVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="-21"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="fVO-SQ-qXP">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="GiB-HZ-yfe" customClass="DashboardViewController" customModule="ClearScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H5q-wJ-aAq" customClass="DashboardView" customModule="ClearScore" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hED-gn-CpY">
+                                <rect key="frame" x="10" y="188" width="355" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hED-gn-CpY" secondAttribute="height" multiplier="1:1" id="TiW-ge-EHt"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credit score is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUy-NV-UDo">
+                                <rect key="frame" x="30" y="290" width="315" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suc-bt-XI3">
+                                <rect key="frame" x="30" y="329.5" width="315" height="72"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUp-Xt-EhE">
+                                <rect key="frame" x="30" y="411.5" width="315" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Suc-bt-XI3" firstAttribute="top" secondItem="lUy-NV-UDo" secondAttribute="bottom" constant="12" id="7rl-BL-TTW"/>
+                            <constraint firstItem="Suc-bt-XI3" firstAttribute="centerY" secondItem="wM2-5H-io4" secondAttribute="centerY" id="IUa-az-2iC"/>
+                            <constraint firstItem="wM2-5H-io4" firstAttribute="trailing" secondItem="Suc-bt-XI3" secondAttribute="trailing" constant="30" id="Kmh-uO-NOR"/>
+                            <constraint firstItem="wM2-5H-io4" firstAttribute="trailing" secondItem="lUy-NV-UDo" secondAttribute="trailing" constant="30" id="QlG-NZ-qfz"/>
+                            <constraint firstItem="wM2-5H-io4" firstAttribute="trailing" secondItem="iUp-Xt-EhE" secondAttribute="trailing" constant="30" id="S8U-eR-Ngh"/>
+                            <constraint firstItem="hED-gn-CpY" firstAttribute="leading" secondItem="wM2-5H-io4" secondAttribute="leading" constant="10" id="SsI-Ez-O5Q"/>
+                            <constraint firstItem="Suc-bt-XI3" firstAttribute="bottom" secondItem="iUp-Xt-EhE" secondAttribute="top" constant="-10" id="VFc-Gt-lHm"/>
+                            <constraint firstItem="hED-gn-CpY" firstAttribute="centerY" secondItem="wM2-5H-io4" secondAttribute="centerY" id="aYx-fg-M8N"/>
+                            <constraint firstItem="Suc-bt-XI3" firstAttribute="centerX" secondItem="wM2-5H-io4" secondAttribute="centerX" id="brD-30-d8I"/>
+                            <constraint firstItem="lUy-NV-UDo" firstAttribute="centerX" secondItem="wM2-5H-io4" secondAttribute="centerX" id="dgH-6s-Y6H"/>
+                            <constraint firstItem="iUp-Xt-EhE" firstAttribute="centerX" secondItem="wM2-5H-io4" secondAttribute="centerX" id="e33-7Z-Q4b"/>
+                            <constraint firstItem="wM2-5H-io4" firstAttribute="trailing" secondItem="hED-gn-CpY" secondAttribute="trailing" constant="10" id="w84-Z7-w2t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wM2-5H-io4"/>
+                        <connections>
+                            <outlet property="donutView" destination="hED-gn-CpY" id="Ltx-fl-RZg"/>
+                            <outlet property="maxScoreLabel" destination="iUp-Xt-EhE" id="xZE-TF-sCg"/>
+                            <outlet property="scoreLabel" destination="Suc-bt-XI3" id="NJT-I9-oJK"/>
+                            <outlet property="yourscoreLabel" destination="lUy-NV-UDo" id="SJI-Hv-Wma"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="klM-bO-DiZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Iz-jD-gyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="-27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
